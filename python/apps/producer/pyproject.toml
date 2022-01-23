@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "producer"
+version = "0.1.0"
+description = ""
+authors = ["chris220688 <13407893+kolitiri@users.noreply.github.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+aiokafka = "^0.7.2"
+protobuf = "^3.19.1"
+grpc-stubs = { path = "../../common/grpc_stubs/", optional = true }
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+grpc-stubs = { path = "../../common/grpc_stubs/", develop = true }
+
+[tool.poetry.extras]
+production = ["grpc-stubs"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

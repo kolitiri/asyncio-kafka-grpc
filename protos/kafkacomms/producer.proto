@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package kafkacomms.producer;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/struct.proto";
+
+
+message SampleMsg {
+	int64 msg_no = 1;
+	string msg_body = 2;
+	google.protobuf.Timestamp msg_date = 3;
+	google.protobuf.Struct msg_other_data = 4;
+}
