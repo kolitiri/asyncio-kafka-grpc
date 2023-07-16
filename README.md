@@ -1,21 +1,21 @@
 # asyncio-kafka-grpc
 
-This is starting point for putting together the three technologies.
+This is a sample project to get started with Kafka producers/consumers and Google Protocol Buffers (Protobuf)
 
 ## Architecture
 
-Nothing special. The producer is publishing a single GRPC message in the 'my_topic' topic in Kafka and the consumer is consuming it.
+Nothing special. The producer is publishing a single Protobuf message in the 'my_topic' topic in Kafka and the consumer is consuming it.
 
 ### Kafka
 Kafka, Zookeeper and Kafdrop applications using **bitnami** images.
 
-### Consumer
-Simple [AIOKafkaConsumer](https://aiokafka.readthedocs.io/en/stable/api.html#aiokafka.AIOKafkaConsumer) that consumes GRPC messages from the 'my_topic' topic of the local Kafka instance.
-
 ### Producer
-Simple [AIOKafkaProducer](https://aiokafka.readthedocs.io/en/stable/api.html#aiokafka.AIOKafkaProducer) that publishes GRPC messages to the 'my_topic' topic of the local Kafka instance.
+Simple [AIOKafkaProducer](https://aiokafka.readthedocs.io/en/stable/api.html#aiokafka.AIOKafkaProducer) that publishes Protobuf messages to the 'my_topic' topic of the local Kafka instance.
 
-### GRPC
+### Consumer
+Simple [AIOKafkaConsumer](https://aiokafka.readthedocs.io/en/stable/api.html#aiokafka.AIOKafkaConsumer) that consumes Protobuf messages from the 'my_topic' topic of the local Kafka instance.
+
+### GRPC stubs
 GRPC stubs are shared between the consumer and the producer.
 
 ## Usage
